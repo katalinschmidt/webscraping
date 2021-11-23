@@ -1,4 +1,4 @@
-"""Driver file for scraping IRS Prior Year Products website & returning site's query as JSON"""
+"""Driver file for scraping website & returning site's query as JSON"""
 
 from bs4 import BeautifulSoup
 import logging
@@ -9,20 +9,20 @@ import json
 logging.basicConfig(filename='scrape_forms_activity.log', level=logging.INFO,
                     format='%(asctime)s:%(levelname)s:%(message)s')
 
-BASE_URL = "https://apps.irs.gov/app/picklist/list/priorFormPublication.html"
+BASE_URL = "https://..."
 
 
 def get_search_params():
     """Prompt user for desired forms' names"""
 
     print("Please type the desired forms' names.")
-    print("E.g. '> Form W-2', or '> Form W-2, Form 1095-C'")
+    print("E.g. '> Form <name>', or '> Form <name>, Form <name>'")
 
     return input("> ").title().split(", ")
 
 
 def get_all_search_results(search_params):
-    """Query IRS Prior Year Products page for user's desired forms / search params & return results"""
+    """Query the website for user's desired forms / search params & return results"""
         
     logging.info(f"Executing search for: {search_params}")
 
