@@ -9,14 +9,14 @@
 ## Project Description
 This project contains two webscrapers:
 1) Scrapes the website for forms matching user's input & returns results as JSON data in a new JSON file
-2) Scrapes the website for forms matching user's input & downloads results as PDFs in a new folder of the desired form's name
+2) Scrapes the website for forms matching user's input & downloads results as PDFs in a new sub-directory of desired form's name
 
 What is webscraping and when is it done?
-    * Webscraping is a program written to extract the data you see when you visit the website manually. 
-    * Webscraping is done when an website lacks a dedicated API for pulling the data. 
-    * It's important to look at the terms and conditions of the website you are scraping and be ethical in your use.
-        * The website being scraped in this project has no robots.txt page.
-        * The purpose of this project was purely personal / educational. 
+ * Webscraping is a program written to extract the data you see when you visit the website manually. 
+ * Webscraping is done when an website lacks a dedicated API for pulling the data. 
+ * It's important to look at the terms and conditions of the website you are scraping and be ethical in your use.
+     * The website being scraped in this project has no robots.txt page.
+     * The purpose of this project was purely personal / educational. 
 
 ## Dependencies
 * Python 3.9.8
@@ -26,7 +26,7 @@ What is webscraping and when is it done?
 ## Set-Up
 1. Clone this repo:
     * `cd <your_desired_directory>`
-    * `git clone https://....`
+    * `git clone https://github.com/katalinschmidt/webscraping.git`
 2. Set-up the virtual environment:
     * `virtualenv env`
     * `source env/bin/activate`
@@ -34,29 +34,29 @@ What is webscraping and when is it done?
 3. For webscraper 1 / form results as JSON data:
     * `$ python3 scrape_forms.py`
     * Input: as prompted
-    * Output: JSON file '/query_results.json'
+    * Output: new file '/query_results.json' containing JSON data
 4. For webscraper 2 / form results as PDF downloads:
     * `$ python3 scrape_downloads.py`
     * Input: as prompted
-    * Output: PDFs are downloaded to subdirectory '/{desired_form_name}'
+    * Output: new subdirectory '/{desired_form_name}' containing PDFs
 
 ## Additional Thoughts
 There are numerous popular webscraping tools and each tool has its own advantages and disadvantages.
 
 In preparation for this project, I looked into the following webscraping tools:
 * BeautifulSoup
-    * user-friendly
-    * requires dependencies => difficult to transfer code
-    * inefficient (for scaling / larger projects)
+    * User-friendly
+    * Requires dependencies => difficult to transfer code
+    * Inefficient (for scaling / larger projects)
 * Selenium
-    * versatile (e.g. automated-testing within the same framework)
-    * works well w/javascript
-    * not user-friendly (i.e. not designed w/webscraping in mind)
+    * Versatile (e.g. automated-testing within the same framework)
+    * Works well with Javascript
+    * Not user-friendly (i.e. not designed w/webscraping in mind)
 * Scrapy
-    * efficient (for scaling / larger projects)
-    * written in python framework => asynchronous capabilities
-    * no dependencies => portable
-    * not user-friendly
+    * Efficient (for scaling / larger projects)
+    * Written in Python framework => asynchronous capabilities
+    * No dependencies => portable
+    * Not user-friendly
 
 Due to my personal time constraints, I decided to use BeautifulSoup for this project.
 Selenium and Scrapy are tools that I am still unfamiliar with, but look forward to learning!
