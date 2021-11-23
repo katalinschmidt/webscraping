@@ -12,11 +12,11 @@ This project contains two webscrapers:
 2) Scrapes the website for forms matching user's input & downloads results as PDFs in a new sub-directory of desired form's name
 
 What is webscraping and when is it done?
-    ** Webscraping is a program written to extract the data you see when you visit the website manually. 
-    ** Webscraping is done when an website lacks a dedicated API for pulling the data. 
-    ** It's important to look at the terms and conditions of the website you are scraping and be ethical in your use.
-        * The website being scraped in this project has no robots.txt page.
-        * The purpose of this project was purely personal / educational. 
+ * Webscraping is a program written to extract the data you see when you visit the website manually. 
+ * Webscraping is done when an website lacks a dedicated API for pulling the data. 
+ * It's important to look at the terms and conditions of the website you are scraping and be ethical in your use.
+     * The website being scraped in this project has no robots.txt page.
+     * The purpose of this project was purely personal / educational. 
 
 ## Dependencies
 * Python 3.9.8
