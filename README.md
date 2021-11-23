@@ -8,8 +8,8 @@
 
 ## Project Description
 This project contains two webscrapers:
-1) Scrapes the IRS Prior Year Products website for forms matching user's input & returns results as JSON data
-2) Scrapes the IRS Prior Year Products website for forms matching user's input & downloads results as PDFs
+1) Scrapes the website for forms matching user's input & returns results as JSON data
+2) Scrapes the website for forms matching user's input & downloads results as PDFs
 
 What is webscraping and when is it done?
     * Webscraping is a program written to extract the data you see when you visit the website manually. 
@@ -26,7 +26,7 @@ What is webscraping and when is it done?
 ## Set-Up
 1. Clone this repo:
     * `cd <your_desired_directory>`
-    * `git clone https://....`
+    * `git clone https://github.com/katalinschmidt/webscraping.git`
 2. Set-up the virtual environment:
     * `virtualenv env`
     * `source env/bin/activate`
