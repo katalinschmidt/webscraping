@@ -8,8 +8,8 @@
 
 ## Project Description
 This project contains two webscrapers:
-1) Scrapes the website for forms matching user's input & returns results as JSON data
-2) Scrapes the website for forms matching user's input & downloads results as PDFs
+1) Scrapes the website for forms matching user's input & returns results as JSON data in a new JSON file
+2) Scrapes the website for forms matching user's input & downloads results as PDFs in a new folder of desired form's name
 
 What is webscraping and when is it done?
     * Webscraping is a program written to extract the data you see when you visit the website manually. 
