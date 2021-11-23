@@ -34,11 +34,11 @@ What is webscraping and when is it done?
 3. For webscraper 1 / form results as JSON data:
     * `$ python3 scrape_forms.py`
     * Input: as prompted
-    * Output: JSON file '/query_results.json'
+    * Output: new file '/query_results.json' containing JSON data
 4. For webscraper 2 / form results as PDF downloads:
     * `$ python3 scrape_downloads.py`
     * Input: as prompted
-    * Output: PDFs are downloaded to subdirectory '/{desired_form_name}'
+    * Output: new subdirectory '/{desired_form_name}' containing PDFs
 
 ## Additional Thoughts
 There are numerous popular webscraping tools and each tool has its own advantages and disadvantages.
