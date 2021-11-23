@@ -45,18 +45,18 @@ There are numerous popular webscraping tools and each tool has its own advantage
 
 In preparation for this project, I looked into the following webscraping tools:
 * BeautifulSoup
-    * user-friendly
-    * requires dependencies => difficult to transfer code
-    * inefficient (for scaling / larger projects)
+    * User-friendly
+    * Requires dependencies => difficult to transfer code
+    * Inefficient (for scaling / larger projects)
 * Selenium
-    * versatile (e.g. automated-testing within the same framework)
-    * works well w/javascript
-    * not user-friendly (i.e. not designed w/webscraping in mind)
+    * Versatile (e.g. automated-testing within the same framework)
+    * Works well with Javascript
+    * Not user-friendly (i.e. not designed w/webscraping in mind)
 * Scrapy
-    * efficient (for scaling / larger projects)
-    * written in python framework => asynchronous capabilities
-    * no dependencies => portable
-    * not user-friendly
+    * Efficient (for scaling / larger projects)
+    * Written in Python framework => asynchronous capabilities
+    * No dependencies => portable
+    * Not user-friendly
 
 Due to my personal time constraints, I decided to use BeautifulSoup for this project.
 Selenium and Scrapy are tools that I am still unfamiliar with, but look forward to learning!
