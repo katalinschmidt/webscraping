@@ -1,0 +1,59 @@
+# # # # # # # # # # # # # # # # # # # # # # # # #
+PART 1
+R: list of strings (form names, e.g. 'Form W-2', 'Form 1095-C')
+M: 
+E: return exact matches in JSON product num, title, and max/min years form is available
+
+[
+    {
+        'form_number': '...',
+        'form_title': '...',
+        'min_year': ...,
+        'max_year': ...
+    }
+]
+
+# # # # # # # # # # # # # # # # # # # # # # # # #
+PART 2
+R: string & 2 ints (form name, two years representing inclusive range, e.g. '2018-2020')
+M: 
+E: download exact matches to subdirectory with format: 'Form Name/Form Name - Year'.pdf 
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+PART 1 MANUAL:
+* go to base_url
+* input form name in find field, find in 'product_num'
+* output is not exact (e.g. input 'form w-2' also outputs 'form w-2 p')
+* paginate table to see all results
+* to see max/min years, sort table column 'revision date'
+
+* paginate w/url:
+* BASE_URL?indexOfFirstRow=0&sortColumn=sortOrder&value=Form+W-2&criteria=formNumber&resultsPerPage=200&isDescending=false
+* BASE_URL?indexOfFirstRow=200&sortColumn=sortOrder&value=Form+W-2&criteria=formNumber&resultsPerPage=200&isDescending=false
+
+* inspect page & note relevant html:
+    * id="picklistContentPane" -> title, search bar, table
+    * class="picklistFormPubNotice" -> serach bar
+        * id="searchFor" -> input string
+        * name="criteria" -> dropdown menu
+            * value="formNumber", "title", "currentYearRevDateString"
+    * class="picklist-dataTable" -> table w/headers
+        * th class="FormNumber", "Title", "CurrentYear"
+        * tr class="even/odd"
+        * td class="Left/Middle/EndCellSpacer"
+
+PART 2 MANUAL:
+* go to base_url
+* input form name in find field, find in 'product_num'
+* output is not exact (e.g. input 'form w-2' also outputs 'form w-2 p')
+* paginate table to see all results
+* click on 'product_num' hyperlink to download PDFs
+
+* paginate w/url:
+* BASE_URL?indexOfFirstRow=0&sortColumn=sortOrder&value=Form+W-2&criteria=formNumber&resultsPerPage=200&isDescending=false
+* BASE_URL?indexOfFirstRow=200&sortColumn=sortOrder&value=Form+W-2&criteria=formNumber&resultsPerPage=200&isDescending=false
+
+* inspect page & note relevant html:
+    * class="picklist-dataTable" -> table w/headers
+        * th class="FormNumber", "Title", "CurrentYear"
+            * td class="LeftCellSpacer" -> a href
